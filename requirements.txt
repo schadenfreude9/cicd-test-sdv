@@ -1,2 +1,2 @@
-flask
-jellyfish
+flask==2.0.1
+jellyfish==0.7
