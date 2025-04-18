@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -17,12 +17,17 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: gh-action-pip-audit
+        uses: pypa/gh-action-pip-audit@v1.0.0
+        with:
+          inputs: requirements.txt
+
       - name: Secret
         env:
           SECRET_API_KEY: ${{ secrets.API_KEY }}
         run: echo "Secret loaded"
 
-      - name: Print version.txt contents
+      - name: print artifact
         run: cat artefact_leak.txt
         
       - name: Install dependencies
