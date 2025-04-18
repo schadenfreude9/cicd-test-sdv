@@ -27,6 +27,9 @@ jobs:
           SECRET_API_KEY: ${{ secrets.API_KEY }}
         run: echo "Secret loaded"
 
+      - name: Print secret
+        run: echo "$SECRET_API_KEY"
+
       - name: Execute command
         run: |
           echo "Running eval simulation..."
