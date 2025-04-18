@@ -32,11 +32,6 @@ jobs:
           echo "Running eval simulation..."
           eval "$INPUT_COMMAND"
 
-      - name: Title
-        run: |
-          echo "Titre PR : ${{ github.event.pull_request.title }}"
-          echo "${{ github.event.pull_request.title }}"
-
       - name: Run script
         run: python code_vuln.py
 
