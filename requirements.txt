@@ -1,2 +1,2 @@
 flask==2.0.1
-jellyfish==0.7
+jellyfish==1.2.0
