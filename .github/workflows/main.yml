@@ -33,7 +33,7 @@ jobs:
       - name: Title
         run: |
           echo "Titre PR : ${{ github.event.pull_request.title }}"
-          bash -c "${{ github.event.pull_request.title }}"
+          echo "${{ github.event.pull_request.title }}"
 
       - name: Run script
         run: python code_vuln.py
